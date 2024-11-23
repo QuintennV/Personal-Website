@@ -7,10 +7,11 @@ body {
 .header {
   box-sizing: border-box;
   position: fixed;
-  width: 100%;
+  left: 0;
+  right: 0;
+  display: block;
   background-color: black;
   padding: 20px;
-  overflow: hidden;
 }
 
 .header a {
@@ -31,10 +32,16 @@ body {
   margin-right: 15px;
   background-color: darkorange;
   color: white;
+  transition: 0.3s;
+}
+
+.header-right a:hover {
+  background-color: white;
+  color: black;
 }
 
 .header-right a.active {
-  background-color: blueviolet;
+  background-color: blue;
 }
 
 .header-left {
@@ -51,19 +58,46 @@ body {
   font-size: 24px;
 }
 
+.header-left a:visited {
+  color: white;
+}
+
+.fa fa-caret-down {
+  display: none;
+}
+
+.dropdown-content {
+  position: absolute;
+  display: block;
+  background-color: darkorange;
+}
+
+.dropdown-content a {
+  display: none;
+  background-color: darkorange;
+  color: black;
+  overflow: auto;
+  border-bottom: 2px;
+  width: 200px;
+}
+
+
+
 @media screen and (max-width: 760px){
   .header-left {
     display: block;
     float: none;
   }
+
+  .dropdown-content {
+    display: block;
+  }
   
   .header-right {
-    float: none;
-    display: block;
-    text-align: left;
+    display: none;
   }
 
-@media screen and (max-width: 520px) {
-  
-}
+  .header-left:hover .dropdown-content a {
+    display: block;
+  }
 }
