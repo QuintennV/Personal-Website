@@ -1,6 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: peachpuff;
+  background: #FFF4E6;
   margin: 0;
 }
 
@@ -10,7 +10,7 @@ body {
   left: 0;
   right: 0;
   display: block;
-  background-color: black;
+  background-color: #2F4F4F;
   padding: 20px;
 }
 
@@ -25,79 +25,96 @@ body {
 
 .header-right a {
   float: left;
-  color: black;
   font-weight: bold;
   padding: 15px 10px;
   margin-left: 15px;
   margin-right: 15px;
-  background-color: darkorange;
+  background-color: #FF6F3C;
   color: white;
   transition: 0.3s;
+  border-radius: 3px;
 }
 
 .header-right a:hover {
-  background-color: white;
+  background-color: #E85C28;
   color: black;
 }
 
 .header-right a.active {
-  background-color: blue;
+  background-color: #20B2AA;
 }
 
 .header-left {
   text-align: left;
   float: left;
-  margin-top: 10px;
-  margin-bottom: 11px;
-}
-
-.header-left a {
-  cursor: default;
-  vertical-align: middle;
-  background-color: black;
-  font-size: 24px;
-}
-
-.header-left a:visited {
+  padding: 10px;
+  background-color: #20B2AA;
   color: white;
 }
 
-.fa fa-caret-down {
-  display: none;
+.header-left:hover {
+  cursor: pointer;
+}
+
+.header-left a {
+  font-size: 24px;
+}
+
+.name-button {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.dropdown-button {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 4px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.change-icon .bar1 {
+  transform: translate(0, 9.5px) rotate(-45deg);
+}
+
+.change-icon .bar2 {opacity: 0;}
+
+.change-icon .bar3 {
+  transform: translate(0, -9.5px) rotate(45deg);
 }
 
 .dropdown-content {
   position: absolute;
-  display: block;
-  background-color: darkorange;
+  left: 20px;
+  width: 288px;
 }
 
 .dropdown-content a {
   display: none;
-  background-color: darkorange;
-  color: black;
-  overflow: auto;
-  border-bottom: 2px;
-  width: 200px;
 }
 
+.show-dropdown a {
+  display: block;
+  background-color: #E85C28;
+  color: black;
+  overflow: auto;
+  padding-left: 10px;
+  text-align: left;
+}
 
-
-@media screen and (max-width: 760px){
+@media screen and (max-width: 780px){
   .header-left {
-    display: block;
+    display: inline-block;
     float: none;
-  }
-
-  .dropdown-content {
-    display: block;
   }
   
   .header-right {
     display: none;
-  }
-
-  .header-left:hover .dropdown-content a {
-    display: block;
   }
 }
