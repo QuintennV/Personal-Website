@@ -10,7 +10,7 @@ body {
 }
 
 .intro-section {
-  text-align: left;
+  text-align: center;
   padding: 150px 20px;
   background-color: #FFF4E6; /* Cream background */
 }
@@ -19,6 +19,7 @@ body {
   padding: 20px;
   margin-bottom: 20px;
   display: inline-block;
+  text-align: left;
   color: white;
   background-color: #FF6F3C;
   box-shadow: 10px 10px lightblue;
