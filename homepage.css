@@ -9,7 +9,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.intro-section {
+.hero-section {
   text-align: center;
   padding: 150px 20px;
   background-color: #FFF4E6; /* Cream background */
@@ -34,9 +34,16 @@ body {
   margin-bottom: 20px;
 }
 
-.intro-text, .intro-pic {
-  display: inline-block;
-  vertical-align: middle;
+.image-and-title p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  max-width: 1050px;
+}
+
+.intro-pic {
+  float: left;
+  height: 260px;
+  margin: 15px;
 }
 
 .intro-pic img {
@@ -46,11 +53,41 @@ body {
   height: 200px;
 }
 
-.intro-section p {
-  font-size: 16px;
-  margin-bottom: 20px;
-  max-width: 700px;
-  margin: 0 auto;
+
+.social-links {
+  display: block;
+  text-align: center;
+}
+
+.icon-container {
+  display: inline-block;
+  background-color: white;
+  padding: 4px;
+  border-radius: 1px;
+  margin-right: 20px;
+  margin-top: 12px;
+  box-shadow: 3px 2px lightblue;
+  transition: 0.2s;
+}
+
+.icon-container:hover {
+  transform: scale(1.2);
+}
+
+.linkedin-icon, .github-icon {
+  color: black;
+  font-size: 40px;
+  vertical-align: middle;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.linkedin-icon:hover {
+  color: #0a66c2;
+}
+
+.github-icon:hover {
+  color: #6b256b
 }
 
 /* Skills Section */
@@ -126,4 +163,28 @@ footer .cta-button {
 
 footer .cta-button:hover {
   background-color: #1E9A90; /* Darker Sea Green on hover */
+}
+/*
+@media screen and (max-width: 1040px) {
+  .image-and-title {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+  }
+
+  .intro-pic, .intro-text {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .intro-pic img {
+    height: fit-content;
+    object-fit: contain;
+  }
+
+  .intro-text {
+    padding-left: 0;
+    max-width: 90%;
+  }
 }
